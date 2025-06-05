@@ -3,25 +3,25 @@ import { Image } from 'expo-image';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 type RootStackParamList = {
-  SecondPage: undefined; // Adicione outras rotas conforme necessário
+  explore: undefined; // Adicione outras rotas conforme necessário
 };
 
 export default function HomeScreen() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const handleNavigate = () => {
-    navigation.navigate('SecondPage'); // Certifique-se de que 'SecondPage' está registrado nas rotas
+    navigation.navigate('explore'); // Certifique-se de que 'SecondPage' está registrado nas rotas
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Descubra os melhores wallpapers do idolo Portugues</Text>
+      <Text style={styles.title}>Aqui tem osmelhores wallpapers do idolo Portugues</Text>
       <Image
         source={{ uri: 'https://wallpapers.com/images/high/cristiano-ronaldo-cool-superstar-digital-art-8raa1djxuh7keyju.webp' }} // Substitua pela URL do wallpaper
         style={styles.wallpaper}
       />
       <TouchableOpacity style={styles.button} onPress={handleNavigate}>
-        <Text style={styles.buttonText}>Ir para a segunda página</Text>
+        <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
     </View>
   );
